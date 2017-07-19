@@ -56,13 +56,19 @@ def show_madlib_form():
 
 @app.route('/madlib')
 def create_madlib():
-    """Returns completed madlib."""
+    """Return completed madlib."""
 
-    user_entries = {}
-    for key in request.args:
-        user_entries[key] = request.args.get(key)
+    person = request.args.get("person")
+    color = request.args.getlist("color")
+    noun = request.args.get("noun")
+    adjective = request.args.get("adjective")
 
-    return render_template("madlib.html", user_entries=user_entries)
+    # user_entries = {}
+    # for key in request.args:
+    #     user_entries[key] = request.args.get(key)
+
+    return render_template("madlib.html", person=person, colors=color,
+                           noun=noun, adjective=adjective)
 
 
 if __name__ == '__main__':
