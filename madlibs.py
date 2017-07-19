@@ -14,6 +14,8 @@ AWESOMENESS = [
     'smashing', 'lovely',
 ]
 
+STORIES = ['storyone', 'storytwo', 'storythree']
+
 
 @app.route('/')
 def start_here():
@@ -62,12 +64,13 @@ def create_madlib():
     color = request.args.getlist("color")
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
+    story = choice(STORIES)
 
     # user_entries = {}
     # for key in request.args:
     #     user_entries[key] = request.args.get(key)
 
-    return render_template("madlib.html", person=person, colors=color,
+    return render_template("madlib.html", storyone=story, person=person, colors=color,
                            noun=noun, adjective=adjective)
 
 

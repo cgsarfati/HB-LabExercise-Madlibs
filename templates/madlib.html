@@ -2,23 +2,65 @@
 <html>
   <head> <title> </title> </head>
   <body>
-  There once was a 
-  {% for color in colors %}
-  {% if colors|length == 1 %}
-  {{ color }}
-  {% endif %}
-  {% if colors|length != 1 and color == colors[-1] %}
-  and {{ color }}
-  {% endif %}
-  {% if colors|length == 2 and color != colors[-1] %}
-  {{ color }}
-  {% endif %}
-  {% if colors|length > 2 and color != colors[-1] %}
-  {{ color }},
-  {% endif %}
-  {% endfor %}
 
-  {{ noun }} sitting in the Hackbright Lab. When {{ person }} went to
-  pick it up, it burst into flames in a totally {{ adjective }} way.
+    {% if storyone %}
+      There once was a 
+        {% for color in colors %}
+          {% if colors|length == 1 %}
+            {{ color }}
+          {% endif %}
+          {% if colors|length != 1 and color == colors[-1] %}
+            and {{ color }}
+          {% endif %}
+          {% if colors|length == 2 and color != colors[-1] %}
+            {{ color }}
+          {% endif %}
+          {% if colors|length > 2 and color != colors[-1] %}
+            {{ color }},
+          {% endif %}
+        {% endfor %}
+      {{ noun }} sitting in the Hackbright Lab. When {{ person }} went to
+      pick it up, it burst into flames in a totally {{ adjective }} way.
+    {% endif %}
+
+    {% if storytwo %}
+      There once was a 
+        {% for color in colors %}
+          {% if colors|length == 1 %}
+            {{ color }}
+          {% endif %}
+          {% if colors|length != 1 and color == colors[-1] %}
+            and {{ color }}
+          {% endif %}
+          {% if colors|length == 2 and color != colors[-1] %}
+            {{ color }}
+          {% endif %}
+          {% if colors|length > 2 and color != colors[-1] %}
+            {{ color }},
+          {% endif %}
+        {% endfor %}
+      {{ noun }} sitting in the ocean. When {{ person }} went to
+      pick it up, it swam in a totally {{ adjective }} way.
+    {% endif %}
+
+    {% if storythree %}
+      There once was a 
+        {% for color in colors %}
+          {% if colors|length == 1 %}
+            {{ color }}
+          {% endif %}
+          {% if colors|length != 1 and color == colors[-1] %}
+            and {{ color }}
+          {% endif %}
+          {% if colors|length == 2 and color != colors[-1] %}
+            {{ color }}
+          {% endif %}
+          {% if colors|length > 2 and color != colors[-1] %}
+            {{ color }},
+          {% endif %}
+        {% endfor %}
+      {{ noun }} sleeping in the park. When {{ person }} went to
+      pick it up, it responded in a totally {{ adjective }} way.
+    {% endif %}
   </body>
 </html>
